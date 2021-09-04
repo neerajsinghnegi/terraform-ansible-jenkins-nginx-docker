@@ -1,0 +1,15 @@
+- hosts: all
+  tasks:
+        - name: deleting the existing app2
+          docker_container:
+                  name: app2
+                  state: absent
+
+        - name: Recreate the app2 container
+          docker_container:
+                name: app2
+                image: neerajsinghnegi/foodvybe:app2
+                state: started
+                ports:
+                        - "8000:3000"
+

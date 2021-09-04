@@ -1,0 +1,50 @@
+- hosts: all
+  vars:
+          apps:
+          - app1
+          - app2
+          images:
+          -  neerajsinghnegi/foodvybe:app2
+          -  neerajsinghnegi/foodvybe:app2
+
+  tasks:
+        - shell: |
+                amazon-linux-extras install nginx1 -y
+                amazon-linux-extras install docker -y
+        - yum:
+                name: pip
+                state: present
+
+        - name: installing docker-py 
+          pip:
+                name: docker-py
+
+        - name: replace nginx file
+          copy:
+                src: default.conf
+                dest: /etc/nginx/conf.d/default.conf
+          notify: service nginx
+
+        - service:
+                name: docker
+                state: started
+
+        - docker_container:
+                name: app1
+                image: neerajsinghnegi/foodvybe:app1
+                state: started
+                ports:
+                        - 80:3000
+
+        - docker_container:
+                name: app2
+                image: neerajsinghnegi/foodvybe:app2
+                state: started
+                ports:
+                        - 8080:3000
+
+  handlers:
+         - name: service nginx
+           service:
+                name: nginx
+                state: restarted
