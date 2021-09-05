@@ -34,8 +34,3 @@
                 state: started
                 ports:
                         - 8080:3000
-  handlers:
-         - name: service nginx
-           service:
-                name: nginx
-                state: restarted
