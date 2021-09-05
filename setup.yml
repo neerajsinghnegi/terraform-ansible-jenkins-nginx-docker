@@ -1,34 +1,39 @@
 - hosts: all
   tasks:
-        - shell: |
+        - name: downloading and installing nginx and docker
+          shell: |
                 amazon-linux-extras install nginx1 -y
                 amazon-linux-extras install docker -y
-        - yum:
+        - name: downloading and installing pip
+          yum:
                 name: pip
                 state: present
 
-        - name: installing docker-py 
+        - name: downloading and installing docker-py dependencies 
           pip:
                 name: docker-py
 
-        - name: replace nginx file
+        - name: replacing nginx default.conf file 
           copy:
                 src: default.conf
                 dest: /etc/nginx/conf.d/default.conf
-          notify: service nginx
 
-        - service:
+        - name: starting the docker services
+          service:
                 name: docker
                 state: started
+                enabled: yes
 
-        - docker_container:
+        - name: launching the app1 application
+          docker_container:
                 name: app1
                 image: neerajsinghnegi/foodvybe:app1
                 state: started
                 ports:
                         - 80:3000
 
-        - docker_container:
+        - name: launching the app2 applicaition 
+          docker_container:
                 name: app2
                 image: neerajsinghnegi/foodvybe:app2
                 state: started
