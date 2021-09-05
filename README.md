@@ -16,5 +16,5 @@ Tools I used :
 
 ![4uC5Jk6wXZ](https://user-images.githubusercontent.com/60294234/132136437-1c1ad1a4-ba42-466e-8ea7-c2152ff7f31a.gif)
 
-![Uploading ciMQgQ0kxv.gif…]()
+![ciMQgQ0kxv](https://user-images.githubusercontent.com/60294234/132136658-bdfb3518-9ff7-46d9-b358-d35b327d227e.gif)
 
