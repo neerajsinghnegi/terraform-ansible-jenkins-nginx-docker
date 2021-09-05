@@ -1,12 +1,4 @@
 - hosts: all
-  vars:
-          apps:
-          - app1
-          - app2
-          images:
-          -  neerajsinghnegi/foodvybe:app2
-          -  neerajsinghnegi/foodvybe:app2
-
   tasks:
         - shell: |
                 amazon-linux-extras install nginx1 -y
@@ -42,7 +34,6 @@
                 state: started
                 ports:
                         - 8080:3000
-
   handlers:
          - name: service nginx
            service:
