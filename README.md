@@ -11,3 +11,8 @@ Tools I used :
 4. DockerHUB
 5. NGINX Webserver - Reverse Proxy
 6. Terraform
+
+![lgLP2UC0Zw](https://user-images.githubusercontent.com/60294234/132136444-beeda26c-d878-4cb1-a1b2-d072cbcd3eb9.gif)
+
+![4uC5Jk6wXZ](https://user-images.githubusercontent.com/60294234/132136437-1c1ad1a4-ba42-466e-8ea7-c2152ff7f31a.gif)
+
