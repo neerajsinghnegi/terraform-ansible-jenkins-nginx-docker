@@ -119,7 +119,7 @@ depends_on = [
   }
 
 provisioner "local-exec" {
-  command = "echo ${aws_instance.tf_instance.public_ip} >> ip"
+  command = "echo ${aws_instance.tf_instance.public_ip} > ip"
   }
 
   provisioner "local-exec" {
