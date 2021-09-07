@@ -171,7 +171,7 @@ depends_on = [
 provisioner "remote-exec" {
     inline = [
       "sudo mkfs.ext4  /dev/xvdh",
-      "sudo mount  /dev/xvdh  /var"
+      "sudo mount  /dev/xvdh  /usr/share/nginx"
     ]
   }
 }
