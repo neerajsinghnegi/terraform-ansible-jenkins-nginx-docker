@@ -1,4 +1,8 @@
 ## Code solution with no GUI involvement and 100% complete automation
+
+Youtube
+https://www.youtube.com/watch?v=jzFvMSaTThE
+
 Create two custom Dockerfiles : Dockerfile1 and Dockerfile2, create containers from these two dockerfiles and deploy the containers in a new AWS server : with port number 80 and 8080 alone and only 8GB of SSD storage. The new server should be created in a new VPC setup (not in default VPC and  gateways etc ).
 Install NGINX as a server on the created new AWS server and deploy the nginx.conf file which uses nginx as a reverse proxy to the two docker containers that you created earlier and will deploy on that server.
 
@@ -19,5 +23,3 @@ Tools I used :
 ![ciMQgQ0kxv](https://user-images.githubusercontent.com/60294234/132136658-bdfb3518-9ff7-46d9-b358-d35b327d227e.gif)
 
 
-Youtube
-https://www.youtube.com/watch?v=jzFvMSaTThE
